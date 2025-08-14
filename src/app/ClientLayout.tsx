@@ -1,13 +1,15 @@
-// PageContainer.tsx
 "use client";
-import { useState } from "react";
-import Navbar from "@/components/NavBar";
-import HomePage from "@/pages/HomePage";
-import InnovationPage from "@/pages/InnovationPage";
-import ProgramPage from "@/pages/ProgramPage";
-import AboutMePage from "@/pages/AboutMe";
 
-export default function PageContainer() {
+import { useState } from "react";
+import Navbar from "../components/NavBar";
+import Footer from "../components/Footer";
+
+import HomePage from "../pages/HomePage";
+import InnovationPage from "../pages/InnovationPage";
+import ProgramPage from "../pages/ProgramPage";
+import AboutMePage from "../pages/AboutMe";
+
+export default function ClientLayout() {
   const [activeTab, setActiveTab] = useState("home");
 
   const renderActiveTab = () => {
@@ -26,9 +28,10 @@ export default function PageContainer() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans flex flex-col">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main>{renderActiveTab()}</main>
+      <main className="flex-grow">{renderActiveTab()}</main>
+      <Footer />
     </div>
   );
 }
