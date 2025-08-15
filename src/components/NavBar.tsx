@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Leaf, Users, BookOpen, Menu, X, Lightbulb } from "lucide-react";
+import { Leaf, BookOpen, Menu, X, Lightbulb, Users } from "lucide-react";
 
 interface NavbarProps {
   activeTab: string;
@@ -14,8 +14,8 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const navItems = [
     { id: "home", label: "Beranda", icon: <Leaf className="w-5 h-5" /> },
     { id: "innovation", label: "Inovasi Kita", icon: <Lightbulb className="w-5 h-5" /> },
-    { id: "program", label: "Program Desa", icon: <Users className="w-5 h-5" /> },
-    { id: "about", label: "About Me", icon: <BookOpen className="w-5 h-5" /> }
+    { id: "program", label: "Program Lainnya", icon: <BookOpen className="w-5 h-5" /> },
+    { id: "about", label: "Tentang Saya", icon: <Users className="w-5 h-5" /> }
   ];
 
   return (

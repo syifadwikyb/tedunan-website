@@ -1,27 +1,37 @@
-import { innovations } from "@/data/innovations"; // sesuaikan path
+// src/pages/InnovationPage.tsx
+"use client";
 
-export default function InnovationPage() {
+import Image from "next/image";
+import { innovations, Innovation } from "../data/innovations";
+
+export default function InnovationPage({ onSelectInnovation }: { onSelectInnovation: (item: Innovation) => void }) {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-8">Inovasi Desa</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {innovations.map((inv) => (
-            <div
-              key={inv.id}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition"
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                {inv.icon}
-                <h3 className="text-xl font-semibold">{inv.title}</h3>
+    <div className="container mx-auto py-16 px-4">
+      <h1 className="text-4xl font-bold text-center text-green-800 mb-12">Inovasi Kita</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {innovations.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+            onClick={() => onSelectInnovation(item)}
+          >
+            <Image
+              src={item.image}
+              alt={item.title}
+              width={500}
+              height={300}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <div className="flex items-center text-green-600 mb-3">
+                <span className="mr-2">{item.icon}</span>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
               </div>
-              <p className="text-gray-600 mb-4">{inv.subtitle}</p>
-              <img src={inv.image} alt={inv.title} className="rounded-lg mb-4" />
-              <p className="text-gray-700">{inv.description}</p>
+              <p className="text-gray-600 leading-relaxed mb-4">{item.subtitle}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
