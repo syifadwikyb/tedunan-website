@@ -9,24 +9,24 @@ import { Play, Recycle } from "lucide-react";
 const slides = [
   {
     id: 1,
-    title: "Area Prioritas Utama (Merah)",
-    description: "Tanah di area ini sangat cocok untuk bak sampah karena komposisi tanah yang stabil dan jauh dari sumber air utama. Prioritas utama untuk pembangunan.",
-    image: "/images/peta-prioritas-merah.png",
-    color: "bg-red-500"
+    title: "Area Paling Direkomendasikan (TPS 1)",
+    description: "Kelebihan: Jauh dari pemukiman warga, lahan tidak sedang digunakan, tanah cukup kering, dan luas memadai. Kekurangan: Berada dekat dengan sumber air irigasi sawah.",
+    image: "/images/peta.jpg",
+    color: "bg-green-500"
   },
   {
     id: 2,
-    title: "Area Prioritas Kedua (Kuning)",
-    description: "Area ini memiliki karakteristik tanah yang cukup baik, namun memerlukan penyesuaian seperti penguatan dasar. Prioritas kedua untuk pembangunan.",
-    image: "/images/peta-prioritas-kuning.png",
+    title: "Area Alternatif (TPS 5)",
+    description: "Kelebihan: Jauh dari pemukiman, lahan cukup kering. Kekurangan: Luas sangat tidak mencukupi untuk fungsi TPS jangka menengah-panjang, berada dekat dengan aliran sungai, dan masih terdapat bangunan pada lokasi.",
+    image: "/images/peta.jpg",
     color: "bg-yellow-500"
   },
   {
     id: 3,
-    title: "Area Tidak Direkomendasikan (Hijau)",
-    description: "Area ini tidak cocok untuk bak sampah karena dekat dengan area resapan air dan lahan pertanian. Sebaiknya dihindari.",
-    image: "/images/peta-prioritas-hijau.png",
-    color: "bg-green-500"
+    title: "Area Tidak Direkomendasikan (TPS 2,3,4)",
+    description: "Kelebihan: Lahan cukup/luas, akses jalan strategis, dan cukup jauh dari pemukiman. Kekurangan: Tanah basah dengan risiko penurunan lahan, sangat dekat dengan aliran sungai, berpotensi mencemari sawah/air tanah, menimbulkan gangguan bau/penyakit, serta masih ada aktivitas tambak garam. Kesimpulan: Lokasi ini paling tidak direkomendasikan.",
+    image: "/images/peta.jpg",
+    color: "bg-red-500"
   }
 ];
 
@@ -127,9 +127,30 @@ export default function HomePage() {
       {/* Slider Analisis Tanah */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-6">
             Analisis Tanah untuk Lokasi Bak Sampah
           </h2>
+
+          {/* Kata Pengantar */}
+          <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed mb-12 text-lg">
+            <p className="mb-4">
+              <span className="font-bold text-green-800">Mengapa perlu menganalisis aspek geologi dan hidrogeologi?</span>
+              Air lindi dari sampah dapat mencemari air tanah, merusak ekosistem, dan membahayakan kesehatan.
+              Karena itu, penentuan lokasi TPS harus diawali dengan analisis geologi dan hidrogeologi yang tepat.
+            </p>
+            <p className="mb-2 font-semibold text-green-700">Analisis Geologi:</p>
+            <ul className="list-disc list-inside mb-4">
+              <li>Jenis & sifat batuan: permeabilitas, kekuatan, daya dukung tanah</li>
+              <li>Geomorfologi: bentuk lahan, kemiringan, proses geomorfologi aktif</li>
+            </ul>
+            <p className="mb-2 font-semibold text-green-700">Analisis Hidrogeologi:</p>
+            <ul className="list-disc list-inside">
+              <li>Sistem akuifer: jenis, kedalaman, produktivitas</li>
+              <li>Kualitas air tanah: parameter fisik, kimia, biologis</li>
+            </ul>
+          </div>
+
+          {/* Slider */}
           <div className="relative max-w-5xl mx-auto rounded-xl shadow-lg overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
@@ -142,10 +163,14 @@ export default function HomePage() {
               >
                 <div className="flex flex-col lg:flex-row bg-white">
                   <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
-                    <div className={`w-fit px-4 py-2 text-white font-bold text-sm rounded-full mb-4 ${slides[currentSlide].color}`}>
+                    <div
+                      className={`w-fit px-4 py-2 text-white font-bold text-sm rounded-full mb-4 ${slides[currentSlide].color}`}
+                    >
                       {slides[currentSlide].title}
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{slides[currentSlide].title}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                      {slides[currentSlide].title}
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
                       {slides[currentSlide].description}
                     </p>
@@ -183,6 +208,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
