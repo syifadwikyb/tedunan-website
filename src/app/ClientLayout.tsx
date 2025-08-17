@@ -12,7 +12,7 @@ import InnovationDetailPage from "../pages/InnovationDetailPage";
 import ProgramDetailPage from "../pages/ProgramDetailPage";
 
 import { Innovation } from "../data/innovations";
-import { Program } from "../data/programs"; // Pastikan Anda mengimpor tipe data Program
+import { Program } from "../data/programs";
 
 export default function ClientLayout() {
   const [activeTab, setActiveTab] = useState("home");
