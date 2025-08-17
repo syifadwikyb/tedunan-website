@@ -6,14 +6,14 @@ import { ArrowLeft, Download } from "lucide-react";
 import { Program } from "../data/programs";
 
 interface ProgramDetailPageProps {
-  program: Program;
+  program: Program | null;   // 🔹 Boleh null biar aman
   onBack: () => void;
 }
 
 export default function ProgramDetailPage({ program, onBack }: ProgramDetailPageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Close modal on ESC
+  // Tutup modal dengan ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsModalOpen(false);
@@ -22,11 +22,27 @@ export default function ProgramDetailPage({ program, onBack }: ProgramDetailPage
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+  // 🔹 Guard jika program null
+  if (!program) {
+    return (
+      <main className="container mx-auto py-12 px-4 md:px-0 text-center">
+        <p className="text-gray-500 mb-4">Program tidak ditemukan.</p>
+        <button
+          onClick={onBack}
+          className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Kembali
+        </button>
+      </main>
+    );
+  }
+
   return (
     <main className="container mx-auto py-12 px-4 md:px-0">
       <button
         onClick={onBack}
-        className="mb-6 inline-flex items-center text-primary-600 hover:underline"
+        className="mb-6 inline-flex items-center text-green-700 hover:underline"
       >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Kembali ke Program
@@ -63,7 +79,10 @@ export default function ProgramDetailPage({ program, onBack }: ProgramDetailPage
             </a>
           )}
 
-          <div dangerouslySetInnerHTML={{ __html: program.content }} />
+          {/* konten html */}
+          {program.content && (
+            <div dangerouslySetInnerHTML={{ __html: program.content }} />
+          )}
         </div>
       </div>
 
