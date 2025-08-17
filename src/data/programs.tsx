@@ -5,7 +5,8 @@ export interface Program {
   title: string;
   description: string;
   image: string;
-  content: string; // Tambahkan properti ini
+  content: string;
+  downloadUrl?: string;
 }
 
 export const programs: Program[] = [
@@ -29,8 +30,7 @@ export const programs: Program[] = [
     </p>
     <p class="text-lg text-gray-700 leading-relaxed mb-6">
       Dengan berbagai manfaat tersebut, penerapan lubang resapan biopori seharusnya menjadi gerakan bersama yang didukung oleh masyarakat, pemerintah, dan lembaga pendidikan. Jika diterapkan secara masif di perkotaan maupun pedesaan, biopori tidak hanya menjadi solusi praktis untuk mengatasi sampah dan banjir, tetapi juga menjadi wujud nyata dari pembangunan berkelanjutan yang menyeimbangkan kebutuhan manusia dengan kelestarian lingkungan.
-    </p>
-  `
+    </p>`
   },
   {
     id: 2,
@@ -70,6 +70,7 @@ export const programs: Program[] = [
       <p class="text-lg text-gray-700 leading-relaxed mb-6">
         Dengan pemeliharaan rutin, seperti pembersihan abu, pemeriksaan ventilasi, dan pengecekan suhu, alat ini mampu digunakan dalam jangka panjang. Selain itu, APSMA membantu mengatasi masalah sampah di masyarakat, mengurangi risiko banjir, pencemaran, dan penyakit, serta mendukung terciptanya lingkungan yang bersih dan sehat.
       </p>
-    `
+    `,
+    downloadUrl: "/files/AlatPembakarSampah.pdf",
   }
 ];

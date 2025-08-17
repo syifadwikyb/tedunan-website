@@ -34,27 +34,39 @@ export const innovations: Innovation[] = [
     tutorial: [
       {
         step: 1,
-        title: "Bagian Luar",
-        description: "Bagian luar APSMA memiliki diameter tong 490 mm dengan tinggi 475 mm, dilengkapi penyangga setinggi 128,25 mm, lebar 505 mm, jari-jari 45 mm, dan tebal 15 mm. Seluruh bagian dibuat dari material plat baja yang kokoh dan tahan lama.",
-        image: "/images/1-1.png"
+        title: "Memotong Tong",
+        description: "Memotong tong menjadi 2 (dua) bagian dengan ukuran yang sama panjang yang sebelumnya sudah diukur menggunakan pemotong besi.",
+        image: "/images/1-1.jpg"
       },
       {
         step: 2,
-        title: "Bagian Dalam",
-        description: "Bagian dalam APSMA terbuat dari plat baja dengan tinggi tabung 460 mm dan diameter dalam 440 mm. Memiliki sirkulasi udara berbentuk persegi panjang berukuran 46 mm × 74 mm dengan sudut 30°, serta sirkulasi udara lingkaran berdiameter 30 mm dengan luas 353 mm². Cerobong berdiameter 390 mm, lebar 30 mm, dan sudut 50°. Volume ruang pembakaran mencapai 0,057 m³ (57 kg), sehingga mampu menampung sampah dalam jumlah besar secara efisien.",
-        image: "/images/1-2.png"
+        title: "Membuat Bagian Dalam",
+        description: "Bagian atas tong yang sudah dipotong sebelumnya akan dikecilkan diameternya, lalu tong dibelah dan digabungkan dengan diameter yang sudah dikecilkan menggunakan las agar bagian tong tersebut dapat dimasukkan kedalam tong bagian luar. Bagian bawah tong dibuat ventilasi berbentuk persegi Panjang yang ukurannya sudah disesuaikan, bagian atas dibelah belah kecil lalu dibuat melengkung kedalam.",
+        image: "/images/1-2.jpg"
       },
       {
         step: 3,
-        title: "Blade",
-        description: "Blade APSMA terbuat dari plat baja dengan diameter luar 440 mm dan diameter dalam 100 mm. Memiliki 8 sirkulasi udara dengan diameter luar 400 mm, jarak 20 mm dari tepi, serta sudut kemiringan 45° untuk mendukung aliran udara optimal.",
-        image: "/images/1-3.png"
+        title: "Membuat Blade",
+        description: "Potong kerangka besi yang sudah dibentuk dan diukur sebelumnya membentuk blade yang berfungsi untuk menciptakan turbulensi dalam ruang bakar, memastikan udara dan sampah tercampur merata.",
+        image: "/images/1-3.jpg"
       },
       {
         step: 4,
-        title: "Penggabungan Semua Komponen",
-        description: "Gabungkan semua komponen APSMA dengan presisi tinggi. Pastikan semua bagian terpasang kokoh dan aman. Periksa kembali setiap sambungan untuk memastikan tidak ada kebocoran udara yang dapat mengurangi efisiensi pembakaran.",
-        image: "/images/1-4.png"
+        title: "Membuat Bagian Luar",
+        description: "Satu bagian dari tong yang sudah dipotong kemudian dijadikan bagian luar dengan bagian atasnya dibuat lubang melingkar dan bagian bawahnya ditutup dan dilas. Kemudian bagian bawah dibuat lubang ventilasi berbentuk bulat.",
+        image: "/images/1-4.jpg"
+      },
+      {
+        step: 5,
+        title: "Penggabungan Komponen",
+        description: "Satu bagian dari tong yang sudah dipotong kemudian dijadikan bagian luar dengan bagian atasnya dibuat lubang melingkar dan bagian bawahnya ditutup dan dilas. Kemudian bagian bawah dibuat lubang ventilasi berbentuk bulat.",
+        image: "/images/1-5.jpg"
+      },
+      {
+        step: 6,
+        title: "Pemasangan Kaki",
+        description: "Kaki pada alat dipasang dengan menentukan posisi terlebih dahulu, lalu dilakukan pengelasan atau pemasangan menggunakan bauta tau mur. Memastikan kaki kuat dan stabil serta dapat menopang beban.",
+        image: "/images/1-6.jpg"
       }
     ]
   },
@@ -122,51 +134,79 @@ export const innovations: Innovation[] = [
     title: "Lilin Aromaterapi dari Limbah Rumah Tangga (Minyak Jelantah)",
     subtitle: "Inovasi Pemanfaatan Minyak Jelantah Menjadi Produk Bernilai",
     icon: <Leaf className="w-8 h-8" />,
-    image: "/images/3.jpeg",
+    image: "/images/3-10.jpg",
     description:
-      "Lilin aromaterapi dari minyak jelantah adalah sebuah inovasi ramah lingkungan yang bertujuan untuk mengurangi pencemaran sekaligus memberikan nilai tambah dari limbah rumah tangga. Minyak jelantah yang umumnya hanya dibuang dan berpotensi mencemari tanah serta air, diolah kembali menjadi bahan utama pembuatan lilin dengan menambahkan campuran stearin atau parafin, serta pewangi alami seperti minyak esensial. Proses ini menghasilkan lilin aromaterapi yang tidak hanya aman digunakan, tetapi juga mampu memberikan aroma menenangkan, menciptakan suasana rileks, dan bermanfaat bagi kesehatan mental. Selain sebagai solusi pengelolaan limbah, inovasi ini juga memiliki potensi ekonomi yang menjanjikan. Lilin aromaterapi dapat dijadikan produk kreatif yang bernilai jual tinggi dengan beragam varian aroma dan bentuk menarik. Hal ini dapat membuka peluang usaha bagi masyarakat, terutama ibu rumah tangga atau kelompok UMKM, dalam mengembangkan industri rumahan berbasis ekonomi sirkular. Dengan demikian, pembuatan lilin aromaterapi dari minyak jelantah tidak hanya membantu menjaga kebersihan lingkungan, tetapi juga mendukung pemberdayaan ekonomi lokal serta mendorong gaya hidup berkelanjutan di masyarakat.",
+      "Lilin aromaterapi dari limbah rumah tangga berbahan minyak jelantah merupakan inovasi ramah lingkungan yang memanfaatkan sisa minyak goreng bekas menjadi produk bernilai. Dengan proses penyaringan, pencampuran bahan tambahan seperti stearin/parafin, pewarna, dan minyak esensial, minyak jelantah dapat diolah menjadi lilin beraroma menenangkan. Produk ini tidak hanya membantu mengurangi pencemaran lingkungan akibat pembuangan minyak bekas, tetapi juga memberikan manfaat kesehatan melalui efek relaksasi dari aromaterapi. Selain itu, lilin ini memiliki potensi ekonomi yang besar karena dapat dijadikan produk kreatif dengan berbagai variasi bentuk dan aroma, sehingga mampu mendorong lahirnya peluang usaha berbasis ekonomi sirkular di masyarakat.",
     tutorial: [
       {
         step: 1,
         title: "Siapkan Bahan dan Alat",
         description:
-          "Kumpulkan minyak jelantah yang sudah disaring, tambahkan stearin atau parafin sebagai penguat, pewarna (opsional), pewangi/aroma esensial, sumbu, wadah, dan alat pemanas.",
+          "Sediakan minyak jelantah yang sudah ditampung, stearin atau parafin, pewarna (opsional), minyak esensial sebagai pewangi, sumbu, wadah cetakan, dan alat pemanas.",
         image: "/images/3-1.jpg"
       },
       {
         step: 2,
         title: "Saring dan Bersihkan Minyak Jelantah",
         description:
-          "Saring minyak jelantah dengan kain atau filter untuk memisahkan kotoran, kemudian panaskan sebentar agar lebih jernih.",
+          "Saring minyak jelantah menggunakan kain atau filter untuk memisahkan kotoran, lalu panaskan sebentar agar lebih jernih.",
         image: "/images/3-2.jpg"
       },
       {
         step: 3,
-        title: "Campurkan dengan Bahan Tambahan",
+        title: "Panaskan Minyak Jelantah",
         description:
-          "Masukkan stearin/parafin ke dalam minyak panas, aduk hingga merata. Tambahkan pewangi aromaterapi dan pewarna bila diinginkan.",
+          "Tuangkan minyak jelantah ke dalam wadah pemanas, kemudian masukkan stearin atau parafin sedikit demi sedikit sambil diaduk hingga larut merata.",
         image: "/images/3-3.jpg"
       },
       {
         step: 4,
-        title: "Siapkan Cetakan dan Sumbu",
+        title: "Masukkan Asam Stearat",
         description:
-          "Letakkan sumbu di tengah wadah atau cetakan. Pastikan posisi sumbu lurus agar lilin bisa terbakar merata.",
+          "Tambahkan asam stearat untuk memperkuat tekstur lilin agar tidak mudah meleleh saat digunakan.",
         image: "/images/3-4.jpg"
       },
       {
         step: 5,
-        title: "Tuangkan Campuran Lilin",
+        title: "Tambahkan Pewarna",
         description:
-          "Tuang campuran minyak jelantah dan bahan tambahan ke dalam cetakan dengan hati-hati. Biarkan hingga mengeras.",
+          "Jika ingin lilin berwarna, masukkan potongan kecil krayon atau pewarna khusus lilin ke dalam campuran minyak sambil diaduk rata.",
         image: "/images/3-5.jpg"
       },
       {
         step: 6,
-        title: "Lilin Aromaterapi Siap Digunakan",
+        title: "Aduk Hingga Merata",
         description:
-          "Setelah mengeras, lilin aromaterapi siap digunakan atau dikemas sebagai produk bernilai jual.",
+          "Aduk campuran minyak, stearin/parafin, asam stearat, dan pewarna hingga benar-benar menyatu.",
         image: "/images/3-6.jpg"
+      },
+      {
+        step: 7,
+        title: "Masukkan Aroma Pewangi",
+        description:
+          "Tambahkan beberapa tetes minyak esensial sesuai aroma yang diinginkan agar lilin memiliki efek aromaterapi.",
+        image: "/images/3-7.jpg"
+      },
+      {
+        step: 8,
+        title: "Aduk Kembali Campuran",
+        description:
+          "Aduk sekali lagi supaya pewangi tercampur rata dengan seluruh adonan lilin.",
+        image: "/images/3-8.jpg"
+      },
+      {
+        step: 9,
+        title: "Tuang ke Cetakan",
+        description:
+          "Letakkan sumbu di tengah cetakan, lalu tuang campuran lilin panas secara perlahan. Pastikan sumbu tetap tegak di posisi tengah.",
+        image: "/images/3-9.jpg"
+      },
+      {
+        step: 10,
+        title: "Dinginkan Lilin",
+        description:
+          "Biarkan lilin di dalam cetakan hingga mengeras sempurna. Setelah itu, lilin aromaterapi siap digunakan atau dikemas untuk dijual.",
+        image: "/images/3-10.jpg"
       }
     ]
   },
