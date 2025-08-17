@@ -12,10 +12,21 @@ interface DetailPageProps {
 }
 
 export default function DetailPage({ innovation, onBack }: DetailPageProps) {
+  // BARIS PENTING: Pindahkan semua hooks ke sini, di bagian paling atas
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
+  // BARIS PENTING: Pindahkan useEffect ke sini
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
-  // BARIS PENTING: Lakukan pemeriksaan di sini
-  // Jika innovation tidak ada, tampilkan pesan error atau loading state.
+  // Sekarang, tambahkan logika kondisional setelah hooks
   if (!innovation) {
     return (
       <div className="container mx-auto py-12 text-center">
@@ -29,17 +40,6 @@ export default function DetailPage({ innovation, onBack }: DetailPageProps) {
       </div>
     );
   }
-
-  // Tutup modal dengan tombol ESC
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setSelectedImage(null);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
   return (
     <main className="container mx-auto py-12 px-4 md:px-0">
