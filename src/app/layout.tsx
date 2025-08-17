@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Desa Hijau",
-  description: "Website inovasi dan program desa hijau",
+  title: "Tedunan Hijau",
+  description: "Website inovasi dan program tedunan hijau",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

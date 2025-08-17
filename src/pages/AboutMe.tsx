@@ -16,21 +16,28 @@ export default function AboutMe() {
           className="text-center"
         >
           <motion.img
-            src="/images/desa-profile.jpg"
+            src="/images/logo.png"
             alt="Profil Desa"
             className="w-44 h-44 mx-auto rounded-full mb-6 object-cover shadow-lg ring-4 ring-white"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
+
           <h2 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-6 tracking-tight">
-            Tentang Desa Hijau
+            Tentang Tedunan Hijau
           </h2>
+
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            <span className="font-semibold text-green-700">Desa Hijau</span> adalah desa yang berkomitmen menjaga kelestarian lingkungan
-            melalui pengelolaan sampah yang <span className="text-green-600 font-medium">inovatif</span> dan <span className="text-green-600 font-medium">berkelanjutan</span>.
-            Kami percaya bahwa <span className="font-semibold text-green-700">kolaborasi masyarakat</span> adalah kunci untuk mencapai
-            <span className="font-semibold text-green-700"> desa bebas sampah</span>, menciptakan masa depan yang bersih dan sehat bagi generasi mendatang.
+            <span className="font-semibold text-green-700">Tedunan Hijau</span> adalah desa yang berkomitmen menjaga kelestarian lingkungan  
+            melalui pengelolaan sampah yang <span className="text-green-600 font-medium">inovatif</span> dan <span className="text-green-600 font-medium">berkelanjutan</span>.  
+            Kami percaya bahwa <span className="font-semibold text-green-700">kolaborasi masyarakat</span> adalah kunci untuk mewujudkan  
+            <span className="font-semibold text-green-700"> desa bersih dan sehat</span>, serta menciptakan <span className="font-semibold text-green-700">masa depan yang lestari</span> bagi generasi mendatang.
+          </p>
+
+          <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            Melalui <span className="font-medium text-green-600">pendidikan lingkungan</span>, <span className="font-medium text-green-600">infrastruktur ramah lingkungan</span>, dan <span className="font-medium text-green-600">inovasi sederhana</span>,  
+            Tedunan Hijau berusaha menjadi inspirasi bagi desa-desa lain dalam menjaga bumi sambil meningkatkan kualitas hidup masyarakatnya.
           </p>
         </motion.div>
       </div>

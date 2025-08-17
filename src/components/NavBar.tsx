@@ -26,7 +26,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
             <div className="bg-green-500 p-2 rounded-full">
               <Leaf className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-green-800">Desa Hijau</span>
+            <span className="text-xl font-bold text-green-800">Tedunan Hijau</span>
           </div>
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
