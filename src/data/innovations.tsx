@@ -20,6 +20,7 @@ export interface Innovation {
   image: string;
   description: string;
   tutorial: TutorialStep[];
+  downloadUrl?: string;
 }
 
 export const innovations: Innovation[] = [
@@ -29,6 +30,7 @@ export const innovations: Innovation[] = [
     subtitle: "Teknologi Arduino Nano untuk Pengukuran Suhu",
     icon: <Thermometer className="" />,
     image: "/images/1.jpg",
+    downloadUrl: "/files/AlatPembakarSampahMinimAsap.pdf",
     description:
       "APSMA adalah inovasi pembakar sampah dengan sistem tertutup dan sirkulasi udara panas yang meminimalkan asap, cocok untuk sekolah, rumah sakit, perkantoran, desa, dan rumah tangga. Menggunakan prinsip pirolisis, sampah dibakar pada suhu tinggi dengan oksigen terbatas, menghasilkan abu dan gas. Gas dibakar kembali di ruang sekunder sehingga asap yang keluar sangat sedikit. Tujuan: Mengurangi volume sampah, mengolah sampah organik dan anorganik non-beracun secara aman, meminimalkan pencemaran udara, dan mendukung pengelolaan sampah ramah lingkungan.",
     tutorial: [

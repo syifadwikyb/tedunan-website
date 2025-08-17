@@ -3,7 +3,7 @@
 
 import { Innovation } from "../data/innovations";
 import Image from "next/image";
-import { ArrowLeft, X } from "lucide-react";
+import { ArrowLeft, X, Download } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface DetailPageProps {
@@ -14,7 +14,7 @@ interface DetailPageProps {
 export default function DetailPage({ innovation, onBack }: DetailPageProps) {
   // BARIS PENTING: Pindahkan semua hooks ke sini, di bagian paling atas
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
+
   // BARIS PENTING: Pindahkan useEffect ke sini
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -55,7 +55,15 @@ export default function DetailPage({ innovation, onBack }: DetailPageProps) {
         {/* Gambar Inovasi */}
         <div
           className="lg:w-1/2 cursor-pointer"
+          role="button" // PERBAIKAN: Menambahkan role untuk aksesibilitas
+          tabIndex={0} // Memungkinkan elemen untuk menerima fokus
           onClick={() => setSelectedImage(innovation.image)}
+          onKeyDown={(e) => {
+            // PERBAIKAN: Menambahkan dukungan keyboard
+            if (e.key === 'Enter' || e.key === ' ') {
+              setSelectedImage(innovation.image);
+            }
+          }}
         >
           <Image
             src={innovation.image}
@@ -78,6 +86,19 @@ export default function DetailPage({ innovation, onBack }: DetailPageProps) {
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             {innovation.description}
           </p>
+
+          {/* PERBAIKAN: Menggunakan innovation.downloadUrl untuk konsistensi */}
+          {innovation.downloadUrl && (
+            <a
+              href={innovation.downloadUrl}
+              download
+              className="inline-flex items-center px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition mb-6"
+            >
+              {/* Asumsikan komponen 'Download' sudah di-import */}
+              <Download className="w-5 h-5 mr-2" />
+              Download File
+            </a>
+          )}
         </div>
       </div>
 
